@@ -31,7 +31,7 @@ class OrderApiTestPositive {
     }
 
     @Test
-    void shouldCheckNameField1() {
+    void shouldCheckFieldsPositive01() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Смит Джон");
@@ -43,7 +43,7 @@ class OrderApiTestPositive {
     }
 
     @Test
-    void shouldCheckNameField2() {
+    void shouldCheckNameFieldPositive02() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Смит-Адамс Джон");
@@ -55,7 +55,7 @@ class OrderApiTestPositive {
     }
 
     @Test
-    void shouldCheckNameField3() {
+    void shouldCheckNameFieldPositive03() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Смит-Адамс Анна-Мария");
@@ -67,7 +67,7 @@ class OrderApiTestPositive {
     }
 
     @Test
-    void shouldCheckNameField4() {
+    void shouldCheckNameFieldPositive04() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Ю Эн");
