@@ -5,10 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b7a0ae-3a5f-45fe-af77-16cc04e21bc4" name="Changes" comment="Initial commit">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderTestNegative.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestNegative.java" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderTestPositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderTestPositive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -76,8 +73,8 @@
       <recent name="ru.netology.MyAutomation3" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderTestNegative">
-    <configuration name="OrderApiTestPositive (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.OrderTestPositive">
+    <configuration name="OrderTestNegative.negative04SendButtonNotClicked" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -90,7 +87,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestPositive&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative04SendButtonNotClicked&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -100,7 +97,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApiTestPositive.shouldCheckFieldsPositive01" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderTestNegative.negative05NameFieldOneWordOnly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -113,7 +110,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestPositive.shouldCheckFieldsPositive01&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative05NameFieldOneWordOnly&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -123,7 +120,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderTestNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderTestNegative.negative06NameFieldHyphensOnly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -136,7 +133,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative06NameFieldHyphensOnly&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -146,7 +143,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderTestNegative.negative01NameFieldNotFilled" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderTestNegative.negative10NameFieldWithDoubleHyphen" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -159,7 +156,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative01NameFieldNotFilled&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative10NameFieldWithDoubleHyphen&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -169,7 +166,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderTestPositive (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderTestPositive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -194,11 +191,11 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OrderTestNegative" />
-        <item itemvalue="Gradle.OrderTestPositive (1)" />
-        <item itemvalue="Gradle.OrderTestNegative.negative01NameFieldNotFilled" />
-        <item itemvalue="Gradle.OrderApiTestPositive (1)" />
-        <item itemvalue="Gradle.OrderApiTestPositive.shouldCheckFieldsPositive01" />
+        <item itemvalue="Gradle.OrderTestPositive" />
+        <item itemvalue="Gradle.OrderTestNegative.negative06NameFieldHyphensOnly" />
+        <item itemvalue="Gradle.OrderTestNegative.negative10NameFieldWithDoubleHyphen" />
+        <item itemvalue="Gradle.OrderTestNegative.negative05NameFieldOneWordOnly" />
+        <item itemvalue="Gradle.OrderTestNegative.negative04SendButtonNotClicked" />
       </list>
     </recent_temporary>
   </component>
@@ -428,7 +425,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663602079760</updated>
     </task>
-    <option name="localTasksCounter" value="32" />
+    <task id="LOCAL-00032" summary="Initial commit">
+      <created>1663603706200</created>
+      <option name="number" value="00032" />
+      <option name="presentableId" value="LOCAL-00032" />
+      <option name="project" value="LOCAL" />
+      <updated>1663603706200</updated>
+    </task>
+    <option name="localTasksCounter" value="33" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
