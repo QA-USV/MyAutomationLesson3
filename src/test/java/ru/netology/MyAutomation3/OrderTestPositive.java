@@ -15,15 +15,13 @@ import java.util.List;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-
-class OrderTestPositive {
+public class OrderTestPositive {
 
     private WebDriver driver;
 
     @BeforeAll
     static void setUpAll() {
         WebDriverManager.chromedriver().setup();
-//        System.setProperty("webdriver.chrome.driver", "chromedriver.exe");
     }
 
     @BeforeEach
@@ -34,7 +32,6 @@ class OrderTestPositive {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
-//        driver = new ChromeDriver();
     }
 
     @AfterEach
