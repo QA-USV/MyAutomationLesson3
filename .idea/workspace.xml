@@ -5,7 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b7a0ae-3a5f-45fe-af77-16cc04e21bc4" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestNegative.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestNegative.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -231,7 +231,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663586165934</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Initial commit">
+      <created>1663586496523</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1663586496523</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

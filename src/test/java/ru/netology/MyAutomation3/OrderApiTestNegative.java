@@ -75,7 +75,7 @@ class OrderApiTestNegative {
     }
 
     @Test
-    void negative05NameFieldNameOnly() {
+    void negative05NameFieldOneWordOnly() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Джон");
@@ -135,7 +135,7 @@ class OrderApiTestNegative {
     }
 
     @Test
-    void negative10NameFieldSurnameWithDoubleHyphen() {
+    void negative10NameFieldWithDoubleHyphen() {
         driver.get("http://localhost:9999");
         List<WebElement> elements = driver.findElements(By.className("input__control"));
         elements.get(0).sendKeys("Смит--Адамс Джон");
