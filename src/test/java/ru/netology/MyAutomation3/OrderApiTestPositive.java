@@ -16,11 +16,13 @@ class OrderApiTestPositive {
 
     @BeforeAll
     static void setUpAll() {
+
         System.setProperty("webdriver.chrome.driver", "driver/chromedriver.exe");
     }
 
     @BeforeEach
     void setUp() {
+
         driver = new ChromeDriver();
     }
 
