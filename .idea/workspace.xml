@@ -70,7 +70,30 @@
       <recent name="ru.netology.MyAutomation3" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderApiTestNegative.negative01CheckPhoneNameNotFilled">
+  <component name="RunManager" selected="Gradle.OrderApiTestNegative">
+    <configuration name="OrderApiTestNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+      <ExternalSystemSettings>
+        <option name="executionName" />
+        <option name="externalProjectPath" value="$PROJECT_DIR$" />
+        <option name="externalSystemIdString" value="GRADLE" />
+        <option name="scriptParameters" value="" />
+        <option name="taskDescriptions">
+          <list />
+        </option>
+        <option name="taskNames">
+          <list>
+            <option value=":test" />
+            <option value="--tests" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestNegative&quot;" />
+          </list>
+        </option>
+        <option name="vmOptions" />
+      </ExternalSystemSettings>
+      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
+      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
+      <DebugAllEnabled>false</DebugAllEnabled>
+      <method v="2" />
+    </configuration>
     <configuration name="OrderApiTestNegative.negative01CheckNameFieldNameNotFilled" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -117,29 +140,6 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApiTestNegative.negative08CheckPhoneFieldZeroOnly" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
-      <ExternalSystemSettings>
-        <option name="executionName" />
-        <option name="externalProjectPath" value="$PROJECT_DIR$" />
-        <option name="externalSystemIdString" value="GRADLE" />
-        <option name="scriptParameters" value="" />
-        <option name="taskDescriptions">
-          <list />
-        </option>
-        <option name="taskNames">
-          <list>
-            <option value=":test" />
-            <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestNegative.negative08CheckPhoneFieldZeroOnly&quot;" />
-          </list>
-        </option>
-        <option name="vmOptions" />
-      </ExternalSystemSettings>
-      <ExternalSystemDebugServerProcess>false</ExternalSystemDebugServerProcess>
-      <ExternalSystemReattachDebugProcess>true</ExternalSystemReattachDebugProcess>
-      <DebugAllEnabled>false</DebugAllEnabled>
-      <method v="2" />
-    </configuration>
     <configuration name="OrderApiTestNegative.negative08CheckSendButtonNotSend" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -163,7 +163,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApiTestNegative.negative09CheckAgreementFlagNotClicked" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApiTestPositive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -176,7 +176,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestNegative.negative09CheckAgreementFlagNotClicked&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderApiTestPositive&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -188,11 +188,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderApiTestNegative" />
+        <item itemvalue="Gradle.OrderApiTestPositive" />
         <item itemvalue="Gradle.OrderApiTestNegative.negative01CheckPhoneNameNotFilled" />
         <item itemvalue="Gradle.OrderApiTestNegative.negative01CheckNameFieldNameNotFilled" />
         <item itemvalue="Gradle.OrderApiTestNegative.negative08CheckSendButtonNotSend" />
-        <item itemvalue="Gradle.OrderApiTestNegative.negative09CheckAgreementFlagNotClicked" />
-        <item itemvalue="Gradle.OrderApiTestNegative.negative08CheckPhoneFieldZeroOnly" />
       </list>
     </recent_temporary>
   </component>
