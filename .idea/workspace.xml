@@ -5,7 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="48b7a0ae-3a5f-45fe-af77-16cc04e21bc4" name="Changes" comment="Initial commit">
-      <change beforePath="$PROJECT_DIR$/driver/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestPositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestPositive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,6 +65,10 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomation3\driver" />
       <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomation3\artifacts" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomation3\driver" />
+      <recent name="D:\QAEngineer\QANetologyLessons\MyAutomationLessons\MyAutomation3" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="ru.netology.MyAutomation3" />
@@ -322,7 +328,21 @@
       <option name="project" value="LOCAL" />
       <updated>1663593553720</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="Initial commit">
+      <created>1663593919301</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1663593919301</updated>
+    </task>
+    <task id="LOCAL-00019" summary="Initial commit">
+      <created>1663594138850</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1663594138850</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
