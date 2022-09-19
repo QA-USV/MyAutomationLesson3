@@ -6,8 +6,6 @@
   <component name="ChangeListManager">
     <list default="true" id="48b7a0ae-3a5f-45fe-af77-16cc04e21bc4" name="Changes" comment="Initial commit">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/chromedriver.exe" beforeDir="false" afterPath="$PROJECT_DIR$/driver/chromedriver.exe" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestPositive.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ru/netology/MyAutomation3/OrderApiTestPositive.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +72,7 @@
       <recent name="ru.netology.MyAutomation3" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderApiTestPositive">
+  <component name="RunManager" selected="Gradle.OrderApiTestPositive (1)">
     <configuration name="OrderApiTestNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
@@ -167,7 +165,7 @@
       <DebugAllEnabled>false</DebugAllEnabled>
       <method v="2" />
     </configuration>
-    <configuration name="OrderApiTestPositive" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+    <configuration name="OrderApiTestPositive (1)" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -192,7 +190,7 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="Gradle.OrderApiTestPositive" />
+        <item itemvalue="Gradle.OrderApiTestPositive (1)" />
         <item itemvalue="Gradle.OrderApiTestNegative" />
         <item itemvalue="Gradle.OrderApiTestNegative.negative01CheckPhoneNameNotFilled" />
         <item itemvalue="Gradle.OrderApiTestNegative.negative01CheckNameFieldNameNotFilled" />
@@ -342,7 +340,14 @@
       <option name="project" value="LOCAL" />
       <updated>1663594138850</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="Initial commit">
+      <created>1663594657236</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1663594657236</updated>
+    </task>
+    <option name="localTasksCounter" value="21" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
