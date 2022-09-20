@@ -72,8 +72,8 @@
       <recent name="ru.netology.MyAutomation3" />
     </key>
   </component>
-  <component name="RunManager" selected="Gradle.OrderTestPositive">
-    <configuration name="OrderTestNegative.negative04SendButtonNotClicked" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
+  <component name="RunManager" selected="Gradle.OrderTestNegative">
+    <configuration name="OrderTestNegative" type="GradleRunConfiguration" factoryName="Gradle" temporary="true">
       <ExternalSystemSettings>
         <option name="executionName" />
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
@@ -86,7 +86,7 @@
           <list>
             <option value=":test" />
             <option value="--tests" />
-            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative.negative04SendButtonNotClicked&quot;" />
+            <option value="&quot;ru.netology.MyAutomation3.OrderTestNegative&quot;" />
           </list>
         </option>
         <option name="vmOptions" />
@@ -190,11 +190,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Gradle.OrderTestNegative" />
         <item itemvalue="Gradle.OrderTestPositive" />
         <item itemvalue="Gradle.OrderTestNegative.negative06NameFieldHyphensOnly" />
         <item itemvalue="Gradle.OrderTestNegative.negative10NameFieldWithDoubleHyphen" />
         <item itemvalue="Gradle.OrderTestNegative.negative05NameFieldOneWordOnly" />
-        <item itemvalue="Gradle.OrderTestNegative.negative04SendButtonNotClicked" />
       </list>
     </recent_temporary>
   </component>
