@@ -11,8 +11,6 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
-import java.util.List;
-
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class OrderTestNegative {
@@ -32,6 +30,7 @@ public class OrderTestNegative {
         options.addArguments("--no-sandbox");
         options.addArguments("--headless");
         driver = new ChromeDriver(options);
+        driver.get("http://localhost:9999");
     }
 
     @AfterEach
@@ -40,145 +39,112 @@ public class OrderTestNegative {
         driver = null;
     }
 
-//    @Test
-//    void negative01NameFieldNotFilled() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative02PhoneFieldNotFilled() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Смит Джон");
-//        elements.get(1).sendKeys("");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative03CheckboxNotClicked() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Смит Джон");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative04SendButtonNotClicked() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Смит Джон");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-
     @Test
-    void negative05NameFieldOneWordOnly() {
-        driver.get("http://localhost:9999");
-        List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Джон");
-        elements.get(1).sendKeys("+79990000000");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button__text")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
+    void negative01NameFieldNotFilled() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
     }
 
     @Test
-    void negative06NameFieldHyphensOnly() {
-        driver.get("http://localhost:9999");
-        List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("----");
-        elements.get(1).sendKeys("+79990000000");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button__text")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
+    void negative02PhoneFieldNotFilled() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
     }
-
-//    @Test
-//    void negative07NameFieldSpacesOnly() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("  ");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative08NameFieldEnglishLang() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Smith John");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative09NameFieldNameAndFigures() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Маша999");
-//        elements.get(1).sendKeys("+79990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
 
     @Test
-    void negative10NameFieldWithDoubleHyphen() {
-        driver.get("http://localhost:9999");
-        List<WebElement> elements = driver.findElements(By.className("input__control"));
-        elements.get(0).sendKeys("Смит--Адамс Джон");
-        elements.get(1).sendKeys("+79990000000");
-        driver.findElement(By.className("checkbox__box")).click();
-        driver.findElement(By.className("button__text")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
-        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
+    void negative03CheckboxNotClicked() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(3) > label > span.checkbox__text")).getText();
+        assertEquals("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй", report.trim());
     }
 
-//    @Test
-//    void negative11PhoneFieldNoPlus() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Смит Джон");
-//        elements.get(1).sendKeys("89990000000");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
-//
-//    @Test
-//    void negative12PhoneFieldTenFigures() {
-//        driver.get("http://localhost:9999");
-//        List<WebElement> elements = driver.findElements(By.className("input__control"));
-//        elements.get(0).sendKeys("Смит Джон");
-//        elements.get(1).sendKeys("+7987654321");
-//        driver.findElement(By.className("checkbox__box")).click();
-//        driver.findElement(By.className("button__text")).click();
-//        String report = driver.findElement(By.className("paragraph")).getText();
-//        assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
-//    }
+    @Test
+    void negative04NameFieldOneWordOnly() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
+    }
+
+    @Test
+    void negative05NameFieldHyphensOnly() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("---");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
+    }
+
+    @Test
+    void negative06NameFieldSpacesOnly() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("   ");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
+    }
+
+    @Test
+    void negative07NameFieldEnglishLang() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Smith John");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+    }
+
+    @Test
+    void negative08NameFieldNameAndFigures() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит 007");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+    }
+
+    @Test
+    void negative09NameFieldWithDoubleHyphen() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит--Адамс Джон");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        assertEquals("Поле обязательно для заполнения", report.trim());
+    }
+
+    @Test
+    void negative10PhoneFieldNoPlus() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("89990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", report.trim());
+    }
+
+    @Test
+    void negative11PhoneFieldTenFigures() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+798765432");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", report.trim());
+    }
 }
