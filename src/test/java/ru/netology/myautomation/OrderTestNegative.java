@@ -74,7 +74,7 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
-        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+        assertEquals("Имя и Фамилия указаные неверно. Поле должно содержать Имя и Фамилию.", report.trim());
     }
 
     @Test
@@ -84,7 +84,7 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
-        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+        assertEquals("Имя и Фамилия указаные неверно. Поле должно содержать Имя и Фамилию.", report.trim());
     }
 
     @Test

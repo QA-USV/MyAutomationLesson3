@@ -40,7 +40,7 @@ public class OrderTestNegativeCheckImmediateAlerts {
 
     @Test
     void negative01NameFieldNotFilled() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys(""); //The field is not filled in.
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys(""); //The field is not filled.
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).click(); //Positioning the cursor on the field
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
         assertEquals("Поле обязательно для заполнения", report.trim());
@@ -49,7 +49,7 @@ public class OrderTestNegativeCheckImmediateAlerts {
     @Test
     void negative02PhoneFieldNotFilled() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys(""); //The field is not filled in.
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys(""); //The field is not filled.
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         String report = driver.findElement(By.xpath("//*[contains(text(),'Поле')]")).getText();
         assertEquals("Поле обязательно для заполнения", report.trim());
@@ -67,28 +67,28 @@ public class OrderTestNegativeCheckImmediateAlerts {
     @Test
     void negative04NameFieldOneWordOnly() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит"); //One word in the field
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).click(); //Positioning the cursor on the field
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).click(); //Positioning the cursor on the next field
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
-        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+        assertEquals("Имя и Фамилия указаные неверно. Поле должно содержать Имя и Фамилию.", report.trim());
     }
 
     @Test
     void negative05NameFieldHyphensOnly() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("--"); //Immediately when two hyphens are printed in a row
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("-"); //Immediately when a hyphen is printed at the beginning.
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
-        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+        assertEquals("Имя и Фамилия указаные неверно. Поле должно содержать Имя и Фамилию.", report.trim());
     }
 
     @Test
     void negative06NameFieldSpacesOnly() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("  "); //Immediately when two spaces are printed in a row
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("  "); //Immediately when a space is printed at the beginning or two spaces are printed in a row
         String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
     @Test
     void negative07NameFieldEnglishLang() {
-        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("S"); //Immediately when a nonRussian letter is printed
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("АлекS"); //Immediately when a nonRussian letter is printed
         String report = driver.findElement(By.xpath("//*[contains(text(),'Имя и Фамилия указаные неверно.')]")).getText();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
@@ -110,7 +110,7 @@ public class OrderTestNegativeCheckImmediateAlerts {
     @Test
     void negative10PhoneFieldNoPlus() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
-        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("8"); //Should start fill in with "+".
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("8"); //First sign should be "+", not a number.
         String report = driver.findElement(By.xpath("//*[contains(text(),'Телефон указан неверно.')]")).getText();
         assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", report.trim());
     }
