@@ -1,4 +1,4 @@
-package ru.netology.MyAutomation3;
+package ru.netology.myautomation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -42,7 +42,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.className("paragraph")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
@@ -52,7 +52,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит-Адамс Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.className("paragraph")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
@@ -62,7 +62,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит-Адамс Анна-Мария");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.className("paragraph")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
@@ -72,7 +72,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Ю Эн");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
+        driver.findElement(By.cssSelector("[type='button']")).click();
         String report = driver.findElement(By.className("paragraph")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }

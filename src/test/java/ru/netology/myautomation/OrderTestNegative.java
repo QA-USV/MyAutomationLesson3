@@ -1,4 +1,4 @@
-package ru.netology.MyAutomation3;
+package ru.netology.myautomation;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 import org.junit.jupiter.api.AfterEach;
@@ -7,7 +7,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 
@@ -44,8 +43,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
         assertEquals("Поле обязательно для заполнения", report.trim());
     }
 
@@ -54,8 +53,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("//*[contains(text(),'Поле')]")).getText();
         assertEquals("Поле обязательно для заполнения", report.trim());
     }
 
@@ -63,8 +62,8 @@ public class OrderTestNegative {
     void negative03CheckboxNotClicked() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(3) > label > span.checkbox__text")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.cssSelector("[role='presentation']")).getText();
         assertEquals("Я соглашаюсь с условиями обработки и использования моих персональных данных и разрешаю сделать запрос в бюро кредитных историй", report.trim());
     }
 
@@ -73,9 +72,9 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
-        assertEquals("Поле обязательно для заполнения", report.trim());
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
     @Test
@@ -83,9 +82,9 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("---");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
-        assertEquals("Поле обязательно для заполнения", report.trim());
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
     @Test
@@ -93,8 +92,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("   ");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
         assertEquals("Поле обязательно для заполнения", report.trim());
     }
 
@@ -103,8 +102,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Smith John");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("//*[contains(text(),'Имя и Фамилия указаные неверно.')]")).getText();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
@@ -113,8 +112,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит 007");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("//*[contains(text(),'Имя и Фамилия указаные неверно.')]")).getText();
         assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
@@ -123,9 +122,9 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит--Адамс Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(1) > span > span > span.input__sub")).getText();
-        assertEquals("Поле обязательно для заполнения", report.trim());
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("(//*[contains(text(),'Поле')])[1]")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
     }
 
     @Test
@@ -133,8 +132,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("89990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("//*[contains(text(),'Телефон указан неверно.')]")).getText();
         assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", report.trim());
     }
 
@@ -143,8 +142,8 @@ public class OrderTestNegative {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+798765432");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
-        driver.findElement(By.cssSelector("[class='button button_view_extra button_size_m button_theme_alfa-on-white']")).click();
-        String report = driver.findElement(By.cssSelector("#root > div > form > div:nth-child(2) > span > span > span.input__sub")).getText();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.xpath("//*[contains(text(),'Телефон указан неверно.')]")).getText();
         assertEquals("Телефон указан неверно. Должно быть 11 цифр, например, +79012345678.", report.trim());
     }
 }
