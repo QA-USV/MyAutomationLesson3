@@ -43,7 +43,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
+        String report = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
 
@@ -53,7 +53,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
+        String report = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
 
@@ -63,7 +63,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
+        String report = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
 
@@ -73,7 +73,7 @@ public class OrderTestPositive {
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
         driver.findElement(By.cssSelector("[type='button']")).click();
-        String report = driver.findElement(By.className("paragraph")).getText();
+        String report = driver.findElement(By.cssSelector("[data-test-id='order-success']")).getText();
         assertEquals("Ваша заявка успешно отправлена! Наш менеджер свяжется с вами в ближайшее время.", report.trim());
     }
 }
