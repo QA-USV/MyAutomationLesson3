@@ -127,7 +127,17 @@ public class OrderTestNegative {
     }
 
     @Test
-    void negative10PhoneFieldNoPlus() {
+    void negative10NameFieldEndsWithHyphen() {
+        driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон-");
+        driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+79990000000");
+        driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
+        driver.findElement(By.cssSelector("[type='button']")).click();
+        String report = driver.findElement(By.cssSelector("[data-test-id='name'].input_invalid .input__sub")).getText();
+        assertEquals("Имя и Фамилия указаные неверно. Допустимы только русские буквы, пробелы и дефисы.", report.trim());
+    }
+
+    @Test
+    void negative11PhoneFieldNoPlus() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("89990000000");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
@@ -137,7 +147,7 @@ public class OrderTestNegative {
     }
 
     @Test
-    void negative11PhoneFieldTenFigures() {
+    void negative12PhoneFieldTenFigures() {
         driver.findElement(By.cssSelector("[data-test-id='name'] input")).sendKeys("Смит Джон");
         driver.findElement(By.cssSelector("[data-test-id='phone'] input")).sendKeys("+798765432");
         driver.findElement(By.cssSelector("[data-test-id='agreement']")).click();
