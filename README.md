@@ -1,6 +1,6 @@
 [![Build status](https://ci.appveyor.com/api/projects/status/5kqky2je1pyid7wh?svg=true)](https://ci.appveyor.com/project/QA-USV/myautomation3)
 
-# Домашнее задание к занятию «Тестирование веб-интерфейсов»
+# Домашнее задание к занятию «Тестирование веб-интерфейсов, Selenium и Selenide»
 
 ## Задача: Заказ карты
 
